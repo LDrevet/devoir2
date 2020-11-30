@@ -1,0 +1,17 @@
+version: "3"
+services:
+  manager:
+    build : . 
+    depends_on:
+      - db
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: ldrevet
+      POSTGRES_PASSWORD: Fen
+      POSTGRES_DB: alaid
+
+  
+
+
